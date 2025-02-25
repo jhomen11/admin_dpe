@@ -1,0 +1,545 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+:root {
+  --altura_nav: 70px;
+  --altura_footer: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+
+.arancel {
+  height: auto;
+}
+
+.header_fonasa {
+  height: var(--altura_nav);
+}
+
+.img-header {
+  position: absolute;
+  top: 0;
+  width: 115px;
+  
+}
+
+@media (max-width: 768px) {
+  .layout_principal {
+    min-height: 30vh; /* Para pantallas móviles */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .layout_principal {
+    min-height: 45vh; /* Para tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .layout_principal {
+    min-height: 55vh; /* Para escritorios */
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  padding: 1.5em;
+  overflow: hidden;
+  background-color: #0a132d;
+  height: var(--altura_footer);
+}
+
+.bg-light {
+  background-color: #dbe7ed !important;
+}
+.bg-primary {
+  background-color: #3badee !important;
+}
+
+.btn-link {
+  text-decoration: none !important;
+}
+
+/* SPINNER 2 */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegura que esté encima de todo */
+}
+
+/* Spinner animado */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #005ca6;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animación de giro */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* FIN SPINNER 2 */
+
+/* SPINNER */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #005ca6;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+/* FiN SPINNER */
+
+.titulo-banner {
+  background: #0078d4;
+  padding: 2.5rem 0;
+  color: #ffffff;
+}
+.titulo-banner h3 {
+  font-size: 2.8rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+/* BARRA DE PROGRESO  */
+.progress-bar-new {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.contenedor-barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step.active {
+  background-color: #3badee;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .contenedor-barra.mobile {
+    display: none;
+  }
+
+  .logo_arancel {
+    display: none;
+  }
+}
+
+/* FIN BARRA DE PROGRESO */
+
+.text-primary {
+  color: #3badee !important;
+}
+.paso {
+  color: lightgray;
+  margin-top: 10px;
+}
+
+.paso.activo {
+  color: #3badee;
+  margin-top: 10px;
+}
+
+.prueba {
+  color: #3badee;
+  text-align: end;
+  border-right: 5px solid #198754;
+  border-left: left 5px solid #198754;
+}
+
+.msg-asesor {
+  background-color: #004f80;
+  border-radius: 5px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin:15px;
+  padding: 20px 20px;
+}
+
+.rrss p {
+  font-family: "Roboto Slab", serif;
+}
+
+.rrss i {
+  color: #0a132d;
+}
+
+/* INICIO ESTILOS CARDS */
+.main_cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #faf9f9;
+  padding: 20px 40px;
+  margin: 20px 0;
+  border-left: #004f80 solid 4px;
+  border-radius: 5px;
+  box-shadow: 5px 10px 10px hsl(240 25% 50% /0.2);
+}
+
+.tipo_arancel {
+  margin-right: 40px;
+}
+
+.tipo_arancel span {
+  margin-left: 5px;
+}
+
+.titulo_card {
+  margin: 20px 0 10px 0;
+}
+
+.titulo_card--p {
+  color: #6d6c6c;
+}
+
+.logo_arancel {
+  /* background-color: #004F80; */
+  color: #004f80;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: #004f80 solid 2px;
+  box-shadow: 5px 10px 10px hsl(240 25% 50% /0.2);
+}
+/* FIN ESTILOS CARDS */
+
+.mensaje_error {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.contenedor-input-switch {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/*
+	BTN Clave Única.
+	Estilos gráficos para el botón de clave única.
+	V 1.1.0
+	por @pyanez
+	24/11/2020
+*/
+
+/* Boton estilo de base */
+.btn-cu {
+  /*display: inline-block;*/
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+}
+
+/*Icono ClaveÚnica*/
+.btn-cu .cl-claveunica {
+  display: inline;
+  float: left;
+  text-indent: -9999px;
+}
+/*Texto ClaveÚnica*/
+.btn-cu .texto {
+  padding-left: 3px;
+  text-decoration: underline;
+}
+
+/* Tamaño S */
+.btn-cu.btn-s {
+  width: 130px;
+  min-width: 130px;
+  height: 36px;
+  padding: 8px 10px !important;
+  font-size: 14px;
+}
+
+.btn-cu.btn-s .cl-claveunica {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+
+/* Tamaño M */
+.btn-cu.btn-m {
+  width: 160px;
+  min-width: 160px;
+  height: 42px;
+  padding: 8px 18px 8px 15px !important;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.btn-cu.btn-m .cl-claveunica {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+
+/* Tamaño L */
+.btn-cu.btn-l {
+  width: 180px;
+  min-width: 180px;
+  height: 48px;
+  padding: 11px 18px !important;
+  font-size: 18px;
+}
+
+.btn-cu.btn-l .cl-claveunica {
+  width: 26px;
+  height: 26px;
+  background-size: 26px 26px;
+}
+
+/* Tamaño fluid-width */
+.btn-cu.btn-fw {
+  max-width: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* Color Estandar */
+.btn-cu.btn-color-estandar {
+  background-color: #0f69c4;
+  color: #fff;
+}
+.btn-cu.btn-color-estandar .cl-claveunica {
+  background: url(../src/assets/cu-blanco.svg);
+  /* Esta URL debe ser modificada segun donde 
+	    quede alojado el documento */
+}
+.btn-cu.btn-color-estandar:hover {
+  background-color: #0c549c;
+  color: #fff;
+}
+
+.btn-cu.btn-color-estandar:active {
+  background-color: #093f75;
+  color: #fff;
+}
+
+.btn-cu.btn-color-estandar:focus {
+  background-color: #0c549c;
+  color: #fff;
+  outline: 1px dashed #000;
+}
+
+.btn-cu {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+}
+.btn-cu .cl-claveunica {
+  display: inline;
+  float: left;
+  text-indent: -9999px;
+}
+.btn-cu .texto {
+  padding-left: 3px;
+  text-decoration: underline;
+}
+.btn-cu.btn-s {
+  width: 130px;
+  min-width: 130px;
+  height: 36px;
+  padding: 8px 10px !important;
+  font-size: 14px;
+}
+.btn-cu.btn-s .cl-claveunica {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+.btn-cu.btn-m {
+  width: 160px;
+  min-width: 160px;
+  height: 42px;
+  padding: 8px 18px 8px 15px !important;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+.btn-cu.btn-m .cl-claveunica {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.btn-cu.btn-l {
+  width: 180px;
+  min-width: 180px;
+  height: 48px;
+  padding: 11px 18px !important;
+  font-size: 18px;
+}
+.btn-cu.btn-l .cl-claveunica {
+  width: 26px;
+  height: 26px;
+  background-size: 26px 26px;
+}
+.btn-cu.btn-fw {
+  max-width: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-cu.btn-color-estandar {
+  background-color: #0f69c4;
+  color: #fff;
+}
+.btn-cu.btn-color-estandar .cl-claveunica {
+  background: url(../src/assets/cu-blanco.svg);
+}
+.btn-cu.btn-color-estandar:hover {
+  background-color: #0c549c;
+  color: #fff;
+}
+.btn-cu.btn-color-estandar:active {
+  background-color: #093f75;
+  color: #fff;
+}
+.btn-cu.btn-color-estandar:focus {
+  background-color: #0c549c;
+  color: #fff;
+  outline: 1px dashed #000;
+}
