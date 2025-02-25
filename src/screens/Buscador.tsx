@@ -1,14 +1,13 @@
 import { FaCloudDownloadAlt, FaDownload, FaInfoCircle } from "react-icons/fa";
 import { Loading } from "../components/Loading";
 import useDescargaReportes from "../hooks/DescargaReportes";
+import { TblAceptadas } from "./TblAceptadas";
 
 export const Buscador = () => {
-    const { cargando, descargaAceptadas } = useDescargaReportes();
+  const { cargando, descargaAceptadas } = useDescargaReportes();
   return (
     <>
-        {cargando && (
-            <Loading />
-        )}
+      {cargando && <Loading />}
       <div className="d-flex ">
         <div className="col-12 border rounded-2 my-4 p-3 shadow">
           <div className="d-flex align-items-center my-4 py-4 px-5 border rounded-2 p-3 shadow">
@@ -20,9 +19,7 @@ export const Buscador = () => {
             <div className="d-flex justify-content-center align-items-center gap-3">
               <h5 className="text-secondary m-0">Propuestas Aceptadas:</h5>
               <div className="mt-2">
-                <button className="btn btn-success"
-                onClick={descargaAceptadas}
-                >
+                <button className="btn btn-success" onClick={descargaAceptadas}>
                   {" "}
                   <FaDownload className="me-2 h5" /> Descargar
                 </button>
@@ -52,13 +49,13 @@ export const Buscador = () => {
               </div>
               <div className="col-12 col-md-auto">
                 <button className="btn btn-primary w-100 w-md-auto">
-                <FaDownload className="me-2 h5" />
+                  <FaDownload className="me-2 h5" />
                   Descargar Archivo Fecha
                 </button>
               </div>
               <div className="col-12 col-md-auto">
                 <button className="btn btn-primary w-100 w-md-auto">
-                <FaDownload className="me-2 h5" />
+                  <FaDownload className="me-2 h5" />
                   Descargar Archivo Banco
                 </button>
               </div>
@@ -92,8 +89,9 @@ export const Buscador = () => {
                 </button>
               </div>
             </div>
-            <hr />
           </form>
+          <hr />
+          <TblAceptadas />
         </div>
       </div>
     </>
